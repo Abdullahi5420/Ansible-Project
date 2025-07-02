@@ -1,0 +1,8 @@
+- name: Test connection to Red Hat VM
+  hosts: redhat
+  gather_facts: yes
+
+  tasks:
+    - name: Show OS name
+      debug:
+        var: ansible_distribution
